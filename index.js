@@ -14,10 +14,10 @@ mongoose.connect(process.env.MONGOOSE_URL);
 app.use(express.json());
 app.use(userRouter)
 app.use(taskRouter)
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log(`here I am on ${port}`);
 });
-
+app.listen(port)
 app.get("/", (req, res) => {
   res.send("Hello from another world");
 });
